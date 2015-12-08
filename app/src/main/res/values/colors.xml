@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+
+    <color name="black_overlay">#66000000</color>
+    <color name="colorMenuBar">#F8F8F8</color>
+    <color name="colorMenuBarTextNor">#00bb9c</color>
+    <color name="colorMenuBarTextSel">#9d55b8</color>
+    <color name="colorToolBar">#3399CC</color>
+    <color name="colorToolBarPress">#553399CC</color>
+    <color name="colorToolBarNormal">#3399CC</color>
+    <color name="spinnerText">#F4C600</color>
+    <color name="spinnerText_nor">#B1B1B1</color>
+    <color name="black_semi_transparent">#B2000000</color>
+    <color name="background">#e5e5e5</color>
+    <color name="half_black">#808080</color>
+    <color name="white_nor">#dbdbdb</color>
+    <color name="white_pressed">#f1f1f1</color>
+    <color name="pink">#e91e63</color>
+    <color name="pink_pressed">#ec407a</color>
+    <color name="blue_semi_transparent">#805677fc</color>
+    <color name="blue_semi_transparent_pressed">#80738ffe</color>
+    <color name="white_my_fragment">#fff</color>
+    <color name="blue_my_fragment">#3F51B5</color>
+    <color name="gray_dividing_small">#CCCCCC</color>
+    <color name="gray_dividing_big">#EBEBEB</color>
+    <color name="red_light_btn">#FF6666</color>
+    <color name="transparent">#0000</color>
+    <color name="background_v2">#efefef</color>
+    <color name="blue_myInfo">#6871c2</color>
+    <color name="grey_login">#919191</color>
+    <color name="white">#FFFFFF</color>
+    <color name="black">#000000</color>
+    <color name="gray">#aaaaaa</color>
+    <color name="light_blue">#6593cb</color>
+</resources>

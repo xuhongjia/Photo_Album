@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black">
+
+    <uk.co.senab.photoview.PhotoView
+        android:visibility="gone"
+        android:id="@+id/image"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#0000"
+        />
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="背部舒缓"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:padding="8dp"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        />
+    <TextView
+        android:id="@+id/description"
+        android:layout_width="match_parent"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentBottom="true"
+        android:layout_height="wrap_content"
+        android:textSize="15sp"
+        android:padding="8dp"
+        android:text="柔、贴、沉的手法让你全身心放松，帮助面部护理达到最佳吸收效果，检测身体哪里..."
+        android:textColor="@color/white"
+        />
+</RelativeLayout>
