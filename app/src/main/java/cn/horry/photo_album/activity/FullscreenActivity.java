@@ -1,4 +1,4 @@
-package cn.horry.photo_album;
+package cn.horry.photo_album.activity;
 
 import android.annotation.SuppressLint;
 import android.support.v7.app.ActionBar;
@@ -14,6 +14,8 @@ import android.view.WindowManager;
 import org.kymjs.kjframe.ui.AnnotateUtil;
 import org.kymjs.kjframe.ui.BindView;
 
+import cn.horry.photo_album.R;
+
 /**
  * An example full-screen activity that shows and hides the system UI (i.e.
  * status bar and navigation/system bar) with user interaction.
@@ -25,7 +27,7 @@ public class FullscreenActivity extends AppCompatActivity {
      */
     private static final boolean AUTO_HIDE = true;
 
-    @BindView(id=R.id.toolbar)
+    @BindView(id= R.id.toolbar)
     private Toolbar toolbar;
     /**
      * If {@link #AUTO_HIDE} is set, the number of milliseconds to wait after

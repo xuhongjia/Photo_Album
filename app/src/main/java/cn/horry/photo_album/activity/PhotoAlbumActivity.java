@@ -1,4 +1,4 @@
-package cn.horry.photo_album;
+package cn.horry.photo_album.activity;
 
 import android.graphics.Bitmap;
 import android.os.Environment;
@@ -27,6 +27,11 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
+
+import cn.horry.photo_album.R;
+import cn.horry.photo_album.adapter.SamplePagerAdapter;
+import cn.horry.photo_album.entity.step;
+import cn.horry.photo_album.utils.ImageUrlCache;
 
 public class PhotoAlbumActivity extends AppCompatActivity {
     private final static String ALBUM_PATH

@@ -1,4 +1,4 @@
-package cn.horry.photo_album;
+package cn.horry.photo_album.entity;
 
 /**
  * Created by Administrator on 2015/12/8.

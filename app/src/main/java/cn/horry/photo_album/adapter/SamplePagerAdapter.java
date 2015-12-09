@@ -1,4 +1,4 @@
-package cn.horry.photo_album;
+package cn.horry.photo_album.adapter;
 
 import android.app.Activity;
 import android.graphics.Bitmap;
@@ -15,6 +15,9 @@ import org.kymjs.kjframe.utils.DensityUtils;
 
 import java.util.List;
 
+import cn.horry.photo_album.R;
+import cn.horry.photo_album.entity.step;
+import cn.horry.photo_album.utils.ImageUrlCache;
 import uk.co.senab.photoview.PhotoView;
 import uk.co.senab.photoview.PhotoViewAttacher;
 
@@ -57,7 +60,7 @@ public class SamplePagerAdapter extends PagerAdapter {
         TextView description = (TextView) root.findViewById(R.id.description);
         photoView.setVisibility(View.GONE);
         title.setText(steps.get(position).getTitle());
-        Bitmap imageCache=ImageUrlCache.getInstence().getImageCache().get(steps.get(position).getStep_pic());
+        Bitmap imageCache= ImageUrlCache.getInstence().getImageCache().get(steps.get(position).getStep_pic());
         if(imageCache!=null){
             displayImage(photoView,imageCache);
         }else

@@ -1,4 +1,4 @@
-package cn.horry.photo_album;
+package cn.horry.photo_album.utils;
 
 import android.graphics.Bitmap;
 import android.util.LruCache;
