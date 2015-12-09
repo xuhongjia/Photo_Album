@@ -16,9 +16,7 @@ import com.google.gson.reflect.TypeToken;
 
 import org.json.JSONException;
 import org.json.JSONObject;
-import org.kymjs.kjframe.KJHttp;
 import org.kymjs.kjframe.http.HttpCallBack;
-import org.kymjs.kjframe.http.Request;
 
 import java.io.BufferedOutputStream;
 import java.io.File;
@@ -28,10 +26,12 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
+import cn.horry.photo_album.API.HttpApi;
 import cn.horry.photo_album.R;
 import cn.horry.photo_album.adapter.SamplePagerAdapter;
 import cn.horry.photo_album.entity.step;
 import cn.horry.photo_album.utils.ImageUrlCache;
+import cn.horry.photo_album.widget.myViewPager;
 
 public class PhotoAlbumActivity extends AppCompatActivity {
     private final static String ALBUM_PATH
@@ -51,7 +51,7 @@ public class PhotoAlbumActivity extends AppCompatActivity {
             }
         }
     };
-    private ViewPager viewPager;
+    private myViewPager viewPager;
     private TextView page;
     private View download;
     @Override
@@ -61,15 +61,14 @@ public class PhotoAlbumActivity extends AppCompatActivity {
         initData();
     }
     private void initData(){
-        KJHttp.Builder builder = new KJHttp.Builder();
-        builder.httpMethod(Request.HttpMethod.GET).url("http://imei.miaomiaostudy.com/api.php?app=project&act=detail&sign=&id=1")
-                .useCache(true).callback(new HttpCallBack() {
+        HttpApi.getData(new HttpCallBack() {
             @Override
             public void onSuccess(String t) {
                 super.onSuccess(t);
                 try {
                     JSONObject jsonObject = new JSONObject(t);
-                    steps= new Gson().fromJson(jsonObject.getJSONObject("data").getString("steps"),new TypeToken<List<step>>(){}.getType());
+                    steps = new Gson().fromJson(jsonObject.getJSONObject("data").getString("steps"), new TypeToken<List<step>>() {
+                    }.getType());
                     handler.sendEmptyMessage(-1);
                 } catch (JSONException e) {
                     e.printStackTrace();
@@ -80,11 +79,11 @@ public class PhotoAlbumActivity extends AppCompatActivity {
             public void onFailure(int errorNo, String strMsg) {
                 super.onFailure(errorNo, strMsg);
             }
-        }).request();
+        });
     }
 
     private void initView(){
-        viewPager = (ViewPager) findViewById(R.id.view_pager);
+        viewPager = (myViewPager) findViewById(R.id.view_pager);
         page = (TextView) findViewById(R.id.page);
         download = findViewById(R.id.download);
         if (steps.size() < 2) {
